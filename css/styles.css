@@ -1,0 +1,187 @@
+/* COLOUR SCHEME (monochromatic)
+Ref: https://color.adobe.com/create/color-wheel
+
+Dark Mauve (Background): #633937
+White (Text and accents): #ffff
+Light pink (button): #e3c2c0
+Bright pink (hover 1): #e8857f
+Dull pink (hover 2) #d6bebc */
+
+/* importing google fonts  */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap");
+
+/* Setting all margins and padding to zero before start */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Hiding side scroll. ensuring height is at 100 */
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Setting background color, center aligning, producing grid to divide masthead, main content, and footer */
+body {
+  background-color: #633937;
+  text-align: center;
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: 1fr;
+  grid-template-areas: "masthead" "main" "footer";
+  grid-template-rows: 2fr 3fr 1fr;
+}
+
+/* Styling masthead */
+header {
+  grid-area: masthead;
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+}
+
+/* Styling main content */
+main {
+  grid-area: main;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  padding: 3rem;
+}
+
+/* Styling footer */
+footer {
+  margin-bottom: 2rem;
+  grid-area: footer;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+/* Styling big heading text "my shopping list" */
+h1 {
+  font-size: 3rem;
+}
+
+/* Styling subheading text "what are we buying today?" */
+h2 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Styling links + hover states below */
+a:link {
+  color: #ffff;
+}
+
+a:hover {
+  color: #e8857f;
+  cursor: pointer;
+}
+
+a:visited {
+  color: #d6bebc;
+}
+
+/* Adjusting background image to span cover and remain responsive */
+.mh-img {
+  background-image: url("../img/shopping-masthead.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% 75%;
+  text-align: center;
+  font-size: 3rem;
+}
+
+/* Styling the header (masthead) text div */
+.mh-text {
+  text-align: center;
+  font-size: 3rem;
+  width: 100%;
+  height: auto;
+  color: #ffff;
+  margin-top: 3rem;
+}
+
+/* Styling dynamic content div */
+.dynamic-content {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  color: white;
+  padding-top: 1.5rem;
+  text-align: left;
+}
+
+/* Styling user input box */
+#user-input {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  width: 100%;
+  height: 2rem;
+}
+
+/* Styling "add" button */
+#add {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  background-color: #e3c2c0;
+  border: none;
+  color: #633937;
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 0.5rem;
+  width: 100%;
+  transition-duration: 1s;
+}
+
+/* Styling add button hover */
+#add:hover {
+  background-color: #e8857f;
+  cursor: pointer;
+  color: #ffff;
+}
+
+/* Styling feedback message */
+#feedback {
+  color: #ffff;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+/* Styling socials in footer */
+#socials ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Styling the list in dynamic content div */
+.dynamic-content li {
+  border-bottom: solid #ffff 2px;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+/* More list styling */
+#list li {
+  text-align: left;
+  color: #ffff;
+  border-bottom: solid #ffff 2px;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+/* MEDIA QUERIES */
+/* Break point set at 45rem as per assignment requirements. Anything over this limit (min width 45rem) is optimized for tablet and desktop view. */
+@media only screen and (min-width: 45rem) {
+  #add {
+    width: 50%;
+    margin-top: 0.5rem;
+  }
+
+  #user-input {
+    width: 50%;
+  }
+}

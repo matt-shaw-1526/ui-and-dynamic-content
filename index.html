@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta info -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Linking stylesheet -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- Title -->
+    <title>UI and Dynamic Content</title>
+  </head>
+  <body>
+    <header id="masthead">
+      <div class="mh-img" style="height: 300px; width: 100%; clear: both"></div>
+      <div class="mh-text">
+        <h1>My Shopping List <i class="fa-solid fa-bag-shopping"></i></h1>
+        <h2>What are we buying today?</h2>
+      </div>
+    </header>
+    <main>
+      <input type="text" id="user-input" placeholder="Enter an item..." />
+      <br />
+      <button id="add">Add to list</button>
+      <div class="dynamic-content">
+        <ul id="list"></ul>
+        <p id="feedback"></p>
+      </div>
+    </main>
+    <footer>
+      <div id="socials">
+        <ul>
+          <li>
+            <a href="https://instagram.com/"
+              ><span><i class="fa-brands fa-instagram fa-3x"></i></span
+            ></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/"
+              ><span><i class="fa-brands fa-twitter fa-3x"></i></span
+            ></a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/"
+              ><span><i class="fa-brands fa-linkedin fa-3x"></i></span
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <!-- Linking js -->
+    <script src="./js/index.js"></script>
+    <!-- Linking font awesome -->
+    <script
+      src="https://kit.fontawesome.com/22ff18bc21.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
